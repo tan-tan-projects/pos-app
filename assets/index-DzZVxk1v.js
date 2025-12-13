@@ -1,0 +1,1 @@
+import{c as o,s as r}from"./index-BFYuH90G.js";const c=async({app:e,router:t})=>{const i=o();e.use(i);const n=r(),a=await n.load("users");if(!a||a.length===0)return t.push("/login");const s=await n.load("user");if(!(s?.alg&&s?.ciphertext&&s?.iv))return t.push("/login")};export{c as default};
