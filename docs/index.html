@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>POS App Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary: #1976d2;
+        --bg: #f9fafb;
+        --card: #ffffff;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --border: #e5e7eb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 48px 20px;
+      }
+
+      h1 {
+        font-size: 2.6rem;
+      }
+      h2 {
+        margin-top: 64px;
+        border-bottom: 2px solid var(--border);
+        padding-bottom: 6px;
+      }
+      h3 {
+        margin-top: 40px;
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 16px;
+      }
+
+      table th,
+      table td {
+        border: 1px solid var(--border);
+        padding: 12px;
+      }
+
+      table th {
+        background: #f3f4f6;
+      }
+
+      ul,
+      ol {
+        padding-left: 22px;
+      }
+
+      .badge {
+        display: inline-block;
+        background: #e3f2fd;
+        color: var(--primary);
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-right: 6px;
+      }
+
+      .screenshot,
+      .doc-image {
+        display: flex;
+        justify-content: center;
+      }
+
+      .screenshot img,
+      .doc-image {
+        display: block;
+        margin: 16px auto;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        cursor: zoom-in;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .doc-image.small {
+        max-width: 200px;
+      }
+
+      .doc-image.medium {
+        max-width: 300px;
+      }
+
+      footer {
+        margin-top: 80px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>🧾 POS App Documentation</h1>
+      <p>
+        🔗 <strong>App URL:</strong>
+        <a href="https://tan-tan-projects.github.io/pos-app" target="_blank">
+          https://tan-tan-projects.github.io/pos-app
+        </a>
+      </p>
+      <p>
+        <span class="badge">User</span>
+        <span class="badge">Admin</span>
+      </p>
+
+      <h2 id="overview">📌 Overview</h2>
+      <p>
+        <strong>POS App</strong> is a web-based Point of Sale application designed to handle sales
+        transactions efficiently. The application supports <strong>role-based access</strong>,
+        allowing different features for different users.
+      </p>
+
+      <h3>👤 Available Roles</h3>
+      <table>
+        <tr>
+          <th>Role</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><strong>User</strong></td>
+          <td>Perform sales transactions</td>
+        </tr>
+        <tr>
+          <td><strong>Admin</strong></td>
+          <td>Manage transactions and master data</td>
+        </tr>
+      </table>
+
+      <h2 id="getting-started">🚀 Getting Started</h2>
+      <p>
+        To start using the POS App, open the application URL and log in using your assigned
+        credentials.
+      </p>
+
+      <h2 id="user-guide">👤 User Guide</h2>
+
+      <h3 id="login">🔐 Login</h3>
+      <ol>
+        <li>Open the POS App website</li>
+        <li>Enter your <strong>username</strong> and <strong>password</strong></li>
+        <li>Click the <strong>Login</strong> button</li>
+        <li>You will be redirected to the <strong>Dashboard</strong></li>
+      </ol>
+      <div class="screenshot">
+        <img
+          src="images/login-page.jpg"
+          alt="Login Screenshot"
+          onclick="window.open(this.src, '_blank')"
+        />
+      </div>
+
+      <h3 id="user-dashboard">📊 User Dashboard</h3>
+      <ul>
+        <li>Navigate to <strong>Transactions</strong></li>
+        <li>View general application information</li>
+      </ul>
+      <div class="screenshot">
+        <img
+          src="images/dashboard-user-page.jpg"
+          alt="User Dashboard"
+          onclick="window.open(this.src, '_blank')"
+        />
+      </div>
+
+      <h3 id="user-transactions">🛒 User Transactions</h3>
+      <ol>
+        <li>Open the <strong>Transactions</strong> menu</li>
+        <li>Select product(s)</li>
+        <li>Enter quantity</li>
+        <li>Total calculated automatically</li>
+        <li>Click <strong>Save / Submit</strong></li>
+      </ol>
+      <p><strong>Result:</strong> Transaction recorded in the system.</p>
+      <div class="screenshot">
+        <img
+          src="images/user-transcations-page.jpg"
+          alt="User Transactions"
+          onclick="window.open(this.src, '_blank')"
+        />
+      </div>
+
+      <h2 id="admin-guide">🛠️ Admin Guide</h2>
+
+      <h3 id="admin-dashboard">📊 Admin Dashboard</h3>
+      <div class="screenshot">
+        <img
+          src="images/dashboard-admin-page.jpg"
+          alt="Admin Dashboard"
+          onclick="window.open(this.src, '_blank')"
+        />
+      </div>
+
+      <h3 id="admin-transactions">📑 Admin Transactions</h3>
+      <ul>
+        <li>View transaction list</li>
+        <li>Monitor sales activity</li>
+      </ul>
+      <div class="screenshot">
+        <img
+          src="images/admin-transcations-page.jpg"
+          alt="Admin Transactions"
+          onclick="window.open(this.src, '_blank')"
+        />
+      </div>
+
+      <h3 id="configurations">⚙️ Configurations</h3>
+      <div class="screenshot">
+        <img
+          src="images/admin-menu.jpg"
+          alt="Configurations Menu"
+          class="doc-image small"
+          onclick="window.open(this.src, '_blank')"
+        />
+      </div>
+
+      <h3 id="categories">🗂️ Categories</h3>
+      <ol>
+        <li>Configurations → Categories</li>
+        <li>Add Category</li>
+        <li>Enter name → Save</li>
+      </ol>
+      <div class="screenshot">
+        <img
+          src="images/admin-menu-categories.jpg"
+          alt="Categories"
+          onclick="window.open(this.src, '_blank')"
+        />
+      </div>
+
+      <h3 id="products">📦 Products</h3>
+      <ol>
+        <li>Configurations → Products</li>
+        <li>Add Product</li>
+        <li>Fill details → Save</li>
+      </ol>
+      <div class="screenshot">
+        <img
+          src="images/admin-menu-products.jpg"
+          alt="Products"
+          onclick="window.open(this.src, '_blank')"
+        />
+      </div>
+
+      <h2 id="faq--troubleshooting">❓ FAQ & Troubleshooting</h2>
+
+      <p>
+        <strong>Why is the Configurations menu not visible?</strong><br />
+        Ensure you are logged in using an <strong>Admin account</strong>.
+      </p>
+
+      <p><strong>Why don’t products appear in the Transactions menu?</strong></p>
+      <ul>
+        <li>Products added by Admin</li>
+        <li>Products assigned to a category</li>
+      </ul>
+
+      <footer>📘 End of Documentation</footer>
+    </div>
+  </body>
+</html>
